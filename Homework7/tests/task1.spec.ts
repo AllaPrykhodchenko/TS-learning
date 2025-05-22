@@ -6,7 +6,7 @@ test('Example Domain page', async ({ page }) => {
   const pageTitle = await page.title();
   expect(pageTitle).toBe('Example Domain');
 
-  const pageUrl = await page.url();
+  const pageUrl = page.url();
   expect(pageUrl).toContain('example.com');
 
   const pageContent = await page.content();
